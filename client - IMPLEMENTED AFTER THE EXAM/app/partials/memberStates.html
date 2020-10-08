@@ -1,0 +1,56 @@
+﻿<div class="main-content">
+    <div class="row">
+        <h3>Parties to the Convention on Biological Diversity</h3>
+    </div>
+    <div class="row">
+        <h4>Number of Parties: {{memberStatesPartyMember.length}}</h4>
+        <h4>Last accession: {{latestMemberState.countryName}} on {{latestMemberState.date}}</h4>
+    </div>
+    <div class="row">
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Country</th>
+                    <th>Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="(index, memberState) in memberStatesPartyMember | orderBy:'countryName'">
+                    <td>{{index + 1}}</td>
+                    <td>{{memberState.countryName}}</td>
+                    <td>{{memberState.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="row">
+        <h4>Number of Non-Parties: {{memberStatesNonPartyMember.length}}</h4>
+    </div>
+    <div class="row">
+
+        <br /><br />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Country</th>
+                    <th>Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="(index, memberState) in memberStatesNonPartyMember | orderBy:'countryName'">
+                    <td>{{index + 1}}</td>
+                    <td>{{memberState.countryName}}</td>
+                    <td>{{memberState.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

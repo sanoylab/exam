@@ -1,0 +1,12 @@
+﻿body {
+    margin-left:25px;
+}
+
+.section {
+    background-color: #efefef;
+    height:800px;
+}
+.main-content {
+    width: 99%;    
+    padding-top: 100px;
+}
